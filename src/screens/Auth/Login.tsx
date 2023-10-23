@@ -55,8 +55,8 @@ const Login = ({}: Props) => {
 
   return (
     <ScrollView style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#677800" />
-      <Text style={{fontSize: 24, fontWeight: '500'}}>Login</Text>
+      <StatusBar barStyle="light-content" backgroundColor="#677800" />
+      <Text style={{fontSize: 24, fontWeight: '500', color: 'white'}}>Login</Text>
       <KeyboardAvoidingView behavior="padding" style={{marginTop: 10}}>
         <Controller
           control={control}
@@ -64,6 +64,7 @@ const Login = ({}: Props) => {
             <MyTextInput
               autoCapitalize="none"
               label="Email"
+              colorLabel="white"
               placeholder="masukan email"
               onBlur={onBlur}
               onChangeText={val => onChange(val)}
@@ -81,6 +82,7 @@ const Login = ({}: Props) => {
             <MyTextInputPassword
               autoCapitalize="none"
               label="Password"
+              colorLabel="white"
               onSecure={onToggle}
               isSecure={!isOpen}
               placeholder="masukan password"

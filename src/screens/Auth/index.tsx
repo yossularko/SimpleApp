@@ -10,9 +10,9 @@ import React from 'react';
 const Splash = () => {
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#677800" />
-      <ActivityIndicator size="large" color="#343149" />
-      <Text style={{color: '#343149'}}>App Loading..</Text>
+      <StatusBar barStyle="light-content" backgroundColor="#677800" />
+      <ActivityIndicator size="large" color="white" />
+      <Text style={{color: 'white'}}>App Loading..</Text>
     </View>
   );
 };
