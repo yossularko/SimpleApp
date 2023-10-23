@@ -16,6 +16,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import Feather from 'react-native-vector-icons/Feather';
 
 import {
   Colors,
@@ -76,6 +77,8 @@ function App(): JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <Text>Tes</Text>
+          <Feather name="activity" size={24} color="tomato" />
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
