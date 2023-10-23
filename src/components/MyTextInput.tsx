@@ -38,7 +38,7 @@ const MyTextInput = forwardRef(
     return (
       <View style={[styles.container, styleContainer]}>
         {label && (
-          <Text style={[styles.label, {color: colorLabel || 'gray'}]}>
+          <Text style={[styles.label, {color: colorLabel || '#343149'}]}>
             {label}
           </Text>
         )}
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     borderWidth: 1,
-    borderColor: 'gray',
+    borderColor: '#343149',
     borderRadius: 10,
     paddingHorizontal: 6,
   },

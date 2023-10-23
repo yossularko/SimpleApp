@@ -43,7 +43,7 @@ const MyTextInputPassword = forwardRef(
     return (
       <View style={styles.container}>
         {label && (
-          <Text style={[styles.label, {color: colorLabel || 'gray'}]}>
+          <Text style={[styles.label, {color: colorLabel || '#343149'}]}>
             {label}
           </Text>
         )}
@@ -56,9 +56,9 @@ const MyTextInputPassword = forwardRef(
           />
           <TouchableOpacity onPress={onSecure}>
             {isSecure ? (
-              <Feather name="eye-off" size={20} color="gray" />
+              <Feather name="eye-off" size={20} color="#343149" />
             ) : (
-              <Feather name="eye" size={20} color="gray" />
+              <Feather name="eye" size={20} color="#343149" />
             )}
           </TouchableOpacity>
         </View>
@@ -82,8 +82,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     borderWidth: 1,
-    borderColor: 'gray',
-    borderRadius: 20,
+    borderColor: '#343149',
+    borderRadius: 10,
     paddingHorizontal: 6,
   },
   textInput: {

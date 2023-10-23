@@ -1,4 +1,4 @@
-import {StyleSheet, Text, ScrollView, KeyboardAvoidingView} from 'react-native';
+import {StyleSheet, Text, ScrollView, KeyboardAvoidingView, StatusBar} from 'react-native';
 import React, {useCallback} from 'react';
 import {MyButton, MyTextInput, MyTextInputPassword} from '../../components';
 import {ScreenWidth} from '../../utils/screenSize';
@@ -55,6 +55,7 @@ const Login = ({}: Props) => {
 
   return (
     <ScrollView style={styles.container}>
+      <StatusBar barStyle="dark-content" backgroundColor="#677800" />
       <Text style={{fontSize: 24, fontWeight: '500'}}>Login</Text>
       <KeyboardAvoidingView behavior="padding" style={{marginTop: 10}}>
         <Controller
@@ -68,6 +69,7 @@ const Login = ({}: Props) => {
               onChangeText={val => onChange(val)}
               value={value}
               errorMessage={errors.email?.message}
+              style={{backgroundColor: 'rgba(255, 255, 255, 0.7)'}}
             />
           )}
           name="email"
@@ -86,6 +88,7 @@ const Login = ({}: Props) => {
               onChangeText={val => onChange(val)}
               value={value}
               errorMessage={errors.password?.message}
+              styleContainer={{backgroundColor: 'rgba(255, 255, 255, 0.7)'}}
             />
           )}
           name="password"
@@ -100,5 +103,5 @@ const Login = ({}: Props) => {
 export default Login;
 
 const styles = StyleSheet.create({
-  container: {paddingHorizontal: ScreenWidth * 0.05, paddingTop: 50},
+  container: {paddingHorizontal: ScreenWidth * 0.05, paddingTop: 50, backgroundColor: '#677800'},
 });
